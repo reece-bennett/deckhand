@@ -1,3 +1,5 @@
+import islands from '../data/islands.js'
+
 const positionText = document.querySelector('#position-text')
 
 function updatePositionText () {
@@ -33,14 +35,16 @@ map.fitBounds([xy(0, 0), xy(26, 26)])
 //   "https://cdn.glitch.me/77a1fe70-8bf7-41d2-b7cc-a9e112011122%2Fmap.svg?v=1638478364898";
 // L.imageOverlay(imageUrl, bounds).addTo(map)
 
-const image = L.imageOverlay.rotated(
-  '/img/islands/smugglersBay.png',
-  xy(5, 3),
-  [1, 1],
-  70
-).addTo(map)
-image._image.style.imageRendering = 'pixelated' // Not sure I like this, bit blurry is nice when you are far out, maybe only add at high zoom levels?
-// image._image.style.background = 'red'
+islands.forEach(island => {
+  const image = L.imageOverlay.rotated(
+    island.image,
+    xy(island.x, island.y),
+    [island.width, island.height],
+    island.rotation
+  ).addTo(map)
+  image._image.style.imageRendering = 'pixelated' // Not sure I like this, bit blurry is nice when you are far out, maybe only add at high zoom levels?
+  // image._image.style.background = 'red'
+})
 
 L.simpleGraticule({
   interval: 1,
