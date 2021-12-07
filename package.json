@@ -1,0 +1,24 @@
+{
+  "name": "deckhand",
+  "version": "1.0.0",
+  "description": "A Sea of Thieves companion app",
+  "private": true,
+  "scripts": {
+    "start": "browser-sync --server --no-open --watch"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "standard": "^16.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reece-bennett/deckhand.git"
+  },
+  "author": "Reece Bennett",
+  "license": "MIT",
+  "standard": {
+    "globals": [
+      "L"
+    ]
+  }
+}

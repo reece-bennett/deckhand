@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "Serve files",
+			"detail": "browser-sync --server --no-open --watch",
+			"isBackground": true
+		}
+	]
+}
