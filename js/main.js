@@ -34,7 +34,7 @@ map.fitBounds([xy(0, 0), xy(26, 26)])
 // L.imageOverlay(imageUrl, bounds).addTo(map)
 
 const image = L.imageOverlay.rotated(
-  'https://cdn.glitch.me/77a1fe70-8bf7-41d2-b7cc-a9e112011122%2FsmugglersBay.png?v=1638482263399',
+  '/img/islands/smugglersBay.png',
   xy(5, 3),
   [1, 1],
   70
