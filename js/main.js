@@ -19,7 +19,11 @@ const xy = function (x, y) {
 // const bounds = [[0, 0], [26, 26]]
 const map = L.map('map', {
   crs: L.CRS.Simple,
-  center: [13, 13]
+  center: [13, 13],
+  zoomSnap: 0.25, // 1
+  zoomDelta: 1, // 1
+  wheelDebounceTime: 40, // 40
+  wheelPxPerZoomLevel: 60 // 60
 })
 map.fitBounds([xy(0, 0), xy(26, 26)])
 
