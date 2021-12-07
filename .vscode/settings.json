@@ -5,8 +5,5 @@
   "javascript.preferences.quoteStyle": "single",
   "files.insertFinalNewline": true,
   "javascript.validate.enable": false,
-  "editor.defaultFormatter": "standard.vscode-standard",
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  }
+  "standard.autoFixOnSave": true,
 }
