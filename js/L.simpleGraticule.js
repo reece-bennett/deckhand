@@ -8,7 +8,8 @@ const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 L.SimpleGraticule = L.LayerGroup.extend({
   options: {
-    interval: 20,
+    xInterval: 20,
+    yInterval: 20,
     showOriginLabel: true,
     redraw: 'move',
     hidden: false,
@@ -44,7 +45,7 @@ L.SimpleGraticule = L.LayerGroup.extend({
   },
 
   onRemove: function (map) {
-    map.off('viewreset ' + this.options.redraw, this.map)
+    // map.off('viewreset ' + this.options.redraw, this.map)
     this.eachLayer(this.removeLayer, this)
   },
 
@@ -59,28 +60,27 @@ L.SimpleGraticule = L.LayerGroup.extend({
   },
 
   redraw: function () {
+    // Pad the bounds to draw lines a little longer
     this._bounds = this._map.getBounds().pad(0.5)
 
     this.clearLayers()
 
-    if (!this.options.hidden) {
-      const currentZoom = this._map.getZoom()
+    const currentZoom = this._map.getZoom()
 
-      for (let i = 0; i < this.options.zoomIntervals.length; i++) {
-        if (
-          currentZoom >= this.options.zoomIntervals[i].start &&
-          currentZoom <= this.options.zoomIntervals[i].end
-        ) {
-          this.options.interval = this.options.zoomIntervals[i].interval
-          break
-        }
+    for (let i = 0; i < this.options.zoomIntervals.length; i++) {
+      if (
+        currentZoom >= this.options.zoomIntervals[i].start &&
+        currentZoom <= this.options.zoomIntervals[i].end
+      ) {
+        this.options.interval = this.options.zoomIntervals[i].interval
+        break
       }
+    }
 
-      this.constructLines(this.getMins(), this.getLineCounts())
+    this.constructLines(this.getMins(), this.getLineCounts())
 
-      if (this.options.showOriginLabel) {
-        this.addLayer(this.addOriginLabel())
-      }
+    if (this.options.showOriginLabel) {
+      this.addLayer(this.addOriginLabel())
     }
 
     return this
@@ -92,23 +92,22 @@ L.SimpleGraticule = L.LayerGroup.extend({
         (
           Math.min(this._bounds.getEast(), this.options.bounds.getEast()) -
           Math.max(this._bounds.getWest(), this.options.bounds.getWest())
-        ) / this.options.interval
+        ) / this.options.xInterval
       ),
       y: Math.ceil(
         (
           Math.min(this._bounds.getNorth(), this.options.bounds.getNorth()) -
           Math.max(this._bounds.getSouth(), this.options.bounds.getSouth())
-        ) / this.options.interval
+        ) / this.options.yInterval
       )
     }
   },
 
   getMins: function () {
-    // rounds up to nearest multiple of x
-    const s = this.options.interval
+    // Round down to nearest interval
     return {
-      x: Math.floor(Math.max(this._bounds.getWest(), this.options.bounds.getWest()) / s) * s,
-      y: Math.floor(Math.max(this._bounds.getSouth(), this.options.bounds.getSouth()) / s) * s
+      x: Math.floor(Math.max(this._bounds.getWest(), this.options.bounds.getWest()) / this.options.xInterval) * this.options.xInterval,
+      y: Math.floor(Math.max(this._bounds.getSouth(), this.options.bounds.getSouth()) / this.options.yInterval) * this.options.yInterval
     }
   },
 
@@ -118,16 +117,16 @@ L.SimpleGraticule = L.LayerGroup.extend({
 
     // for horizontal lines
     for (let i = 0; i <= counts.x; i++) {
-      const x = mins.x + i * this.options.interval
+      const x = mins.x + i * this.options.xInterval
       lines[i] = this.buildXLine(x)
       if (i > 0) {
-        labels[i] = this.buildLabel('gridlabel-horiz', ALPHABET[i + mins.x - 1], mins.x + (i - 1) * this.options.interval)
+        labels[i] = this.buildLabel('gridlabel-horiz', ALPHABET[i + mins.x - 1], mins.x + (i - 1) * this.options.xInterval)
       }
     }
 
     // for vertical lines
     for (let j = 0; j <= counts.y; j++) {
-      const y = mins.y + j * this.options.interval
+      const y = mins.y + j * this.options.yInterval
       lines[j + counts.x + 1] = this.buildYLine(y)
       if (j > 0) {
         labels[j + counts.x + 1] = this.buildLabel('gridlabel-vert', 27 - mins.y - j, y)

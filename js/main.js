@@ -25,7 +25,9 @@ const map = L.map('map', {
   wheelDebounceTime: 40, // 40
   wheelPxPerZoomLevel: 60 // 60
 })
-map.fitBounds([xy(0, 0), xy(26, 26)])
+// map.setView([14, 18], 3)
+map.setView([15, 15], 5)
+// map.fitBounds([xy(0, 0), xy(26, 26)])
 
 // L.tileLayer(
 //   "https://www.seaofthievesmap.info/tiles-forsaken2/{z}/{x}/{y}.png",
@@ -50,10 +52,16 @@ islands.forEach(island => {
   // image._image.style.background = 'red'
 })
 
-L.simpleGraticule({
-  interval: 1,
-  showOriginLabel: false,
-  redraw: 'move'
+// L.simpleGraticule({
+//   xInterval: 1.5,
+//   yInterval: 1,
+//   bounds: L.latLngBounds([0, 0], [26, 39]),
+//   showOriginLabel: false,
+//   redraw: 'move'
+// }).addTo(map)
+
+L.layerGroup.grid({
+
 }).addTo(map)
 
 map.on('zoom', updatePositionText)
