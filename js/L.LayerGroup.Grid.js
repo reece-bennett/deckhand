@@ -9,28 +9,31 @@ L.LayerGroup.Grid = L.LayerGroup.extend({
   },
 
   options: {
-    interval: { x: 1.5, y: 1 },
+    interval: { x: 1.07, y: 1 },
     size: { x: 26, y: 26 }
   },
 
   initialize: function (options) {
     L.LayerGroup.prototype.initialize.call(this)
     L.Util.setOptions(this, options)
+
+    this._xMarkers = []
+    this._yMarkers = []
   },
 
   onAdd: function (map) {
     L.LayerGroup.prototype.onAdd.call(this, map)
     this._draw()
-    map.on('viewreset move', this._draw, this)
+    map.on('viewreset move', this._updateMarkers, this)
   },
 
   onRemove: function (map) {
     L.LayerGroup.prototype.onRemove.call(this, map)
-    map.off('viewreset move', this._draw, this)
+    map.off('viewreset move', this._updateMarkers, this)
   },
 
   _calculateBounds: function () {
-    return L.latLngBounds([
+    this._bounds = L.latLngBounds([
       [0, 0],
       [
         this.options.size.y * this.options.interval.y,
@@ -39,30 +42,55 @@ L.LayerGroup.Grid = L.LayerGroup.extend({
     ])
   },
 
+  _calculateXMarkerLatLng: function (i) {
+    return [
+      Math.min(this._bounds.pad(0.02).getNorth(), this._map.getBounds().pad(-0.02).getNorth()),
+      i * this.options.interval.x + (this.options.interval.x / 2)
+    ]
+  },
+
+  _calculateYMarkerLatLng: function (i) {
+    return [
+      i * this.options.interval.y - (this.options.interval.y / 2),
+      Math.max(this._bounds.pad(0.02).getWest(), this._map.getBounds().pad(-0.02).getWest())
+    ]
+  },
+
+  _updateMarkers: function () {
+    this._calculateBounds()
+
+    for (let i = 0; i < this._xMarkers.length; i++) {
+      this._xMarkers[i].setLatLng(this._calculateXMarkerLatLng(i))
+    }
+
+    for (let i = 1; i < this._yMarkers.length; i++) {
+      this._yMarkers[i].setLatLng(this._calculateYMarkerLatLng(i))
+    }
+  },
+
   _draw: function () {
     this.clearLayers()
 
-    const bounds = this._calculateBounds()
+    this._calculateBounds()
 
     for (let i = 0; i <= this.options.size.x; i++) {
       const x = i * this.options.interval.x
 
       this.addLayer(L.polyline([
-        [bounds.getSouth(), x],
-        [bounds.getNorth(), x]
+        [this._bounds.getSouth(), x],
+        [this._bounds.getNorth(), x]
       ], this._lineStyle))
 
       if (i < this.options.size.x) {
-        this.addLayer(L.marker([
-          Math.min(bounds.getNorth(), this._map.getBounds().getNorth() - 0.2),
-          x + (this.options.interval.x / 2)
-        ], {
+        const marker = L.marker(this._calculateXMarkerLatLng(i), {
           interactive: false,
           keyboard: false,
           icon: L.divIcon({
             html: this._ALPHABET[i]
           })
-        }))
+        })
+        this._xMarkers[i] = marker
+        this.addLayer(marker)
       }
     }
 
@@ -70,21 +98,20 @@ L.LayerGroup.Grid = L.LayerGroup.extend({
       const y = i * this.options.interval.y
 
       this.addLayer(L.polyline([
-        [y, bounds.getWest()],
-        [y, bounds.getEast()]
+        [y, this._bounds.getWest()],
+        [y, this._bounds.getEast()]
       ], this._lineStyle))
 
       if (i > 0) {
-        this.addLayer(L.marker([
-          y - (this.options.interval.y / 2),
-          Math.max(bounds.getWest(), this._map.getBounds().getWest() + 0.2)
-        ], {
+        const marker = L.marker(this._calculateYMarkerLatLng(i), {
           interactive: false,
           keyboard: false,
           icon: L.divIcon({
             html: 27 - i
           })
-        }))
+        })
+        this._yMarkers[i] = marker
+        this.addLayer(marker)
       }
     }
   }
