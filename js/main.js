@@ -23,7 +23,10 @@ const map = L.map('map', {
   zoomSnap: 0.25, // 1
   zoomDelta: 1, // 1
   wheelDebounceTime: 40, // 40
-  wheelPxPerZoomLevel: 60 // 60
+  wheelPxPerZoomLevel: 60, // 60
+  renderer: L.svg({
+    padding: 1 // Stops grid disappearing when panning
+  })
 })
 // map.setView([14, 18], 3)
 map.setView([15, 15], 5)
