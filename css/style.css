@@ -47,6 +47,32 @@ html, body {
   padding: 4px 8px;
 }
 
+.grid-label {
+  line-height: 1;
+  font-size: 32px;
+}
+
+.grid-label--horizontal {
+  margin-top: -2ch;
+}
+
+.grid-label--vertical {
+  margin-left: -2ch;
+}
+
+.grid-label__text {
+  width: 2ch;
+  text-align: center;
+}
+
+.grid-label--horizontal > .grid-label__text {
+  transform: translate(-50%, 0);
+}
+
+.grid-label--vertical > .grid-label__text {
+  transform: translate(0, -50%);
+}
+
 .island-label__text {
   font-size: 16px;
   white-space: nowrap;

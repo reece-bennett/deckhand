@@ -43,8 +43,10 @@ L.LayerGroup.Grid = L.LayerGroup.extend({
   },
 
   _calculateXMarkerLatLng: function (i) {
+    // bounds.pad() is percentage increase pad on the map bounds changes when the viewport changes
+    // would be better to pad by fixed pixel value
     return [
-      Math.min(this._bounds.pad(0.02).getNorth(), this._map.getBounds().pad(-0.02).getNorth()),
+      Math.min(this._bounds.pad(0.005).getNorth(), this._map.getBounds().pad(-0.09).getNorth()),
       i * this.options.interval.x + (this.options.interval.x / 2)
     ]
   },
@@ -52,7 +54,7 @@ L.LayerGroup.Grid = L.LayerGroup.extend({
   _calculateYMarkerLatLng: function (i) {
     return [
       i * this.options.interval.y - (this.options.interval.y / 2),
-      Math.max(this._bounds.pad(0.02).getWest(), this._map.getBounds().pad(-0.02).getWest())
+      Math.max(this._bounds.pad(0.005).getWest(), this._map.getBounds().pad(-0.05).getWest())
     ]
   },
 
