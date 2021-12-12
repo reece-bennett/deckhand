@@ -1,7 +1,7 @@
 export default [
   {
     name: 'Ancient Spire Outpost',
-    image: '/img/islands/ancientSpireOutpost.png',
+    image: 'img/islands/ancientSpireOutpost.png',
     x: 17.48,
     y: 16.44,
     width: 0.31,
@@ -10,7 +10,7 @@ export default [
   },
   {
     name: 'Ashen Reaches',
-    image: '/img/islands/ashenReaches.png',
+    image: 'img/islands/ashenReaches.png',
     x: 22.74,
     y: 22.39,
     width: 0.64,
@@ -19,7 +19,7 @@ export default [
   },
   {
     name: 'Barnacle Cay',
-    image: '/img/islands/barnacleCay.png',
+    image: 'img/islands/barnacleCay.png',
     x: 15.82,
     y: 14.96,
     width: 0.21,
@@ -28,7 +28,7 @@ export default [
   },
   {
     name: 'Black Sand Atoll',
-    image: '/img/islands/blackSandAtoll.png',
+    image: 'img/islands/blackSandAtoll.png',
     x: 15.71,
     y: 2.99,
     width: 0.21,
@@ -37,7 +37,7 @@ export default [
   },
   {
     name: 'Black Water Enclave',
-    image: '/img/islands/blackWaterEnclave.png',
+    image: 'img/islands/blackWaterEnclave.png',
     x: 18.76,
     y: 4.41,
     width: 0.16,
@@ -46,7 +46,7 @@ export default [
   },
   {
     name: "Blind Man's Lagoon",
-    image: '/img/islands/blindMansLagoon.png',
+    image: 'img/islands/blindMansLagoon.png',
     x: 14.90,
     y: 5.40,
     width: 0.23,
@@ -55,7 +55,7 @@ export default [
   },
   {
     name: 'Booty Isle',
-    image: '/img/islands/bootyIsle.png',
+    image: 'img/islands/bootyIsle.png',
     x: 11.06,
     y: 19.91,
     width: 0.18,
@@ -64,7 +64,7 @@ export default [
   },
   {
     name: 'Boulder Cay',
-    image: '/img/islands/boulderCay.png',
+    image: 'img/islands/boulderCay.png',
     x: 6.51,
     y: 4.40,
     width: 0.12,
@@ -73,7 +73,7 @@ export default [
   },
   {
     name: "Brian's Bazaar",
-    image: '/img/islands/briansBazaar.png',
+    image: 'img/islands/briansBazaar.png',
     x: 25.98,
     y: 11.33,
     width: 0.08,
@@ -82,7 +82,7 @@ export default [
   },
   {
     name: 'Brimstone Rock',
-    image: '/img/islands/brimstoneRock.png',
+    image: 'img/islands/brimstoneRock.png',
     x: 25.68,
     y: 17.78,
     width: 0.22,
@@ -91,7 +91,7 @@ export default [
   },
   {
     name: 'Cannon Cove',
-    image: '/img/islands/cannonCove.png',
+    image: 'img/islands/cannonCove.png',
     x: 6.53,
     y: 9.14,
     width: 0.67,
@@ -100,7 +100,7 @@ export default [
   },
   {
     name: 'Castaway Isle',
-    image: '/img/islands/castawayIsle.png',
+    image: 'img/islands/castawayIsle.png',
     x: 10.86,
     y: 13.15,
     width: 0.17,
@@ -109,7 +109,7 @@ export default [
   },
   {
     name: 'Chicken Isle',
-    image: '/img/islands/chickenIsle.png',
+    image: 'img/islands/chickenIsle.png',
     x: 9.10,
     y: 15.09,
     width: 0.22,
@@ -118,7 +118,7 @@ export default [
   },
   {
     name: 'Cinder Islet',
-    image: '/img/islands/cinderIslet.png',
+    image: 'img/islands/cinderIslet.png',
     x: 22.05,
     y: 13.63,
     width: 0.18,
@@ -127,7 +127,7 @@ export default [
   },
   {
     name: 'Crescent Isle',
-    image: '/img/islands/crescentIsle.png',
+    image: 'img/islands/crescentIsle.png',
     x: 2.09,
     y: 8.63,
     width: 0.54,
@@ -136,7 +136,7 @@ export default [
   },
   {
     name: "Crook's Hollow",
-    image: '/img/islands/crooksHollow.png',
+    image: 'img/islands/crooksHollow.png',
     x: 13.78,
     y: 15.20,
     width: 0.52,
@@ -145,7 +145,7 @@ export default [
   },
   {
     name: 'Cursewater Shores',
-    image: '/img/islands/cursewaterShores.png',
+    image: 'img/islands/cursewaterShores.png',
     x: 25.76,
     y: 12.54,
     width: 0.19,
@@ -154,7 +154,7 @@ export default [
   },
   {
     name: 'Cutlass Cay',
-    image: '/img/islands/cutlassCay.png',
+    image: 'img/islands/cutlassCay.png',
     x: 13.58,
     y: 17.39,
     width: 0.25,
@@ -163,7 +163,7 @@ export default [
   },
   {
     name: 'Dagger Tooth Outpost',
-    image: '/img/islands/daggerToothOutpost.png',
+    image: 'img/islands/daggerToothOutpost.png',
     x: 13.74,
     y: 7.06,
     width: 0.65,
@@ -172,7 +172,7 @@ export default [
   },
   {
     name: "Devil's Ridge",
-    image: '/img/islands/devilsRidge.png',
+    image: 'img/islands/devilsRidge.png',
     x: 16.68,
     y: 18.76,
     width: 0.56,
@@ -181,7 +181,7 @@ export default [
   },
   {
     name: 'Discovery Ridge',
-    image: '/img/islands/discoveryRidge.png',
+    image: 'img/islands/discoveryRidge.png',
     x: 4.44,
     y: 16.28,
     width: 0.92,
@@ -190,7 +190,7 @@ export default [
   },
   {
     name: "Fetcher's Rest",
-    image: '/img/islands/fetchersRest.png',
+    image: 'img/islands/fetchersRest.png',
     x: 23.01,
     y: 11.39,
     width: 0.64,
@@ -199,7 +199,7 @@ export default [
   },
   {
     name: "Flame's End",
-    image: '/img/islands/flamesEnd.png',
+    image: 'img/islands/flamesEnd.png',
     x: 23.30,
     y: 18.84,
     width: 0.18,
@@ -208,7 +208,7 @@ export default [
   },
   {
     name: 'Flintlock Peninsula',
-    image: '/img/islands/flintlockPeninsula.png',
+    image: 'img/islands/flintlockPeninsula.png',
     x: 24.09,
     y: 13.99,
     width: 0.64,
@@ -217,7 +217,7 @@ export default [
   },
   {
     name: "Fool's Lagoon",
-    image: '/img/islands/foolsLagoon.png',
+    image: 'img/islands/foolsLagoon.png',
     x: 9.39,
     y: 13.65,
     width: 0.12,
@@ -226,7 +226,7 @@ export default [
   },
   {
     name: 'fort of the Dammed',
-    image: '/img/islands/fortOfTheDammed.png',
+    image: 'img/islands/fortOfTheDammed.png',
     x: 12.67,
     y: 13.63,
     width: 0.23,
@@ -235,7 +235,7 @@ export default [
   },
   {
     name: "Galleon's Grave Outpost",
-    image: '/img/islands/galleonsGraveOutpost.png',
+    image: 'img/islands/galleonsGraveOutpost.png',
     x: 18.80,
     y: 7.26,
     width: 0.41,
@@ -244,7 +244,7 @@ export default [
   },
   {
     name: 'Glowstone Cay',
-    image: '/img/islands/glowstoneCay.png',
+    image: 'img/islands/glowstoneCay.png',
     x: 27.56,
     y: 17.97,
     width: 0.18,
@@ -253,7 +253,7 @@ export default [
   },
   {
     name: 'Golden Sands Outpost',
-    image: '/img/islands/goldenSandsOutpost.png',
+    image: 'img/islands/goldenSandsOutpost.png',
     x: 4.15,
     y: 9.88,
     width: 0.58,
@@ -262,7 +262,7 @@ export default [
   },
   {
     name: 'Hidden Spring Keep',
-    image: '/img/islands/hiddenSpringKeep.png',
+    image: 'img/islands/hiddenSpringKeep.png',
     x: 9.31,
     y: 7.25,
     width: 0.32,
@@ -271,7 +271,7 @@ export default [
   },
   {
     name: 'Isle of Last Words',
-    image: '/img/islands/isleOfLastWords.png',
+    image: 'img/islands/isleOfLastWords.png',
     x: 15.24,
     y: 8.50,
     width: 0.21,
@@ -280,7 +280,7 @@ export default [
   },
   {
     name: 'Keel Haul Fort',
-    image: '/img/islands/keelHaulFort.png',
+    image: 'img/islands/keelHaulFort.png',
     x: 3.16,
     y: 5.87,
     width: 0.29,
@@ -289,7 +289,7 @@ export default [
   },
   {
     name: "Kraken's Fall",
-    image: '/img/islands/krakensFall.png',
+    image: 'img/islands/krakensFall.png',
     x: 18.84,
     y: 11.96,
     width: 0.90,
@@ -298,7 +298,7 @@ export default [
   },
   {
     name: 'Kraken Watchtower',
-    image: '/img/islands/krakenWatchtower.png',
+    image: 'img/islands/krakenWatchtower.png',
     x: 12.14,
     y: 5.32,
     width: 0.21,
@@ -307,7 +307,7 @@ export default [
   },
   {
     name: 'Lagoon of Whispers',
-    image: '/img/islands/lagoonOfWhispers.png',
+    image: 'img/islands/lagoonOfWhispers.png',
     x: 3.98,
     y: 11.94,
     width: 0.21,
@@ -316,7 +316,7 @@ export default [
   },
   {
     name: "Liar's Backbone",
-    image: '/img/islands/liarsBackbone.png',
+    image: 'img/islands/liarsBackbone.png',
     x: 19.77,
     y: 10.26,
     width: 0.22,
@@ -325,7 +325,7 @@ export default [
   },
   {
     name: 'Lone Cove',
-    image: '/img/islands/loneCove.png',
+    image: 'img/islands/loneCove.png',
     x: 8.18,
     y: 5.47,
     width: 0.59,
@@ -334,7 +334,7 @@ export default [
   },
   {
     name: 'Lonely Isle',
-    image: '/img/islands/lonelyIsle.png',
+    image: 'img/islands/lonelyIsle.png',
     x: 7.45,
     y: 7.34,
     width: 0.18,
@@ -343,7 +343,7 @@ export default [
   },
   {
     name: 'Lookout Point',
-    image: '/img/islands/lookoutPoint.png',
+    image: 'img/islands/lookoutPoint.png',
     x: 9.61,
     y: 19.39,
     width: 0.27,
@@ -352,7 +352,7 @@ export default [
   },
   {
     name: 'Lost Gold Fort',
-    image: '/img/islands/lostGoldFort.png',
+    image: 'img/islands/lostGoldFort.png',
     x: 8.49,
     y: 16.85,
     width: 0.25,
@@ -361,7 +361,7 @@ export default [
   },
   {
     name: "Magma's Tide",
-    image: '/img/islands/magmasTide.png',
+    image: 'img/islands/magmasTide.png',
     x: 26.50,
     y: 19.87,
     width: 0.23,
@@ -370,7 +370,7 @@ export default [
   },
   {
     name: "Marauder's Arch",
-    image: '/img/islands/maraudersArch.png',
+    image: 'img/islands/maraudersArch.png',
     x: 17.72,
     y: 2.85,
     width: 0.58,
@@ -379,7 +379,7 @@ export default [
   },
   {
     name: "Mermaid's Hiewaway",
-    image: '/img/islands/mermaidsHideaway.png',
+    image: 'img/islands/mermaidsHideaway.png',
     x: 2.10,
     y: 12.65,
     width: 0.45,
@@ -388,7 +388,7 @@ export default [
   },
   {
     name: 'Molten Sands Fortress',
-    image: '/img/islands/moltenSandsFortress.png',
+    image: 'img/islands/moltenSandsFortress.png',
     x: 27.22,
     y: 10.97,
     width: 0.52,
@@ -397,7 +397,7 @@ export default [
   },
   {
     name: "Morrow's Peak Outpost",
-    image: '/img/islands/morrowsPeakOutpost.png',
+    image: 'img/islands/morrowsPeakOutpost.png',
     x: 23.20,
     y: 16.51,
     width: 0.60,
@@ -406,7 +406,7 @@ export default [
   },
   {
     name: 'Mutineer Rock',
-    image: '/img/islands/mutineerRock.png',
+    image: 'img/islands/mutineerRock.png',
     x: 14.68,
     y: 18.71,
     width: 0.25,
@@ -415,7 +415,7 @@ export default [
   },
   {
     name: 'Old Faithful Isle',
-    image: '/img/islands/oldFaithfulIsle.png',
+    image: 'img/islands/oldFaithfulIsle.png',
     x: 13.85,
     y: 3.75,
     width: 0.83,
@@ -424,7 +424,7 @@ export default [
   },
   {
     name: 'Old Salts Atoll',
-    image: '/img/islands/oldSaltsAtoll.png',
+    image: 'img/islands/oldSaltsAtoll.png',
     x: 5.83,
     y: 17.91,
     width: 0.23,
@@ -433,7 +433,7 @@ export default [
   },
   {
     name: 'Paradise Spring',
-    image: '/img/islands/paradiseSpring.png',
+    image: 'img/islands/paradiseSpring.png',
     x: 12.36,
     y: 16.56,
     width: 0.23,
@@ -442,7 +442,7 @@ export default [
   },
   {
     name: 'Picaroon Palms',
-    image: '/img/islands/picaroonPalms.png',
+    image: 'img/islands/picaroonPalms.png',
     x: 9.03,
     y: 3.72,
     width: 0.20,
@@ -451,7 +451,7 @@ export default [
   },
   {
     name: "Plunder's Plight",
-    image: '/img/islands/plunderersPlight.png',
+    image: 'img/islands/plunderersPlight.png',
     x: 17.83,
     y: 5.55,
     width: 0.21,
@@ -460,7 +460,7 @@ export default [
   },
   {
     name: 'Plunder Outpost',
-    image: '/img/islands/plunderOutpost.png',
+    image: 'img/islands/plunderOutpost.png',
     x: 10.70,
     y: 17.61,
     width: 0.45,
@@ -469,7 +469,7 @@ export default [
   },
   {
     name: 'Plunder Valley',
-    image: '/img/islands/plunderValley.png',
+    image: 'img/islands/plunderValley.png',
     x: 6.71,
     y: 15.33,
     width: 0.71,
@@ -478,7 +478,7 @@ export default [
   },
   {
     name: 'Raiper Cay',
-    image: '/img/islands/raiperCay.png',
+    image: 'img/islands/raiperCay.png',
     x: 3.95,
     y: 7.63,
     width: 0.24,
@@ -487,7 +487,7 @@ export default [
   },
   {
     name: 'Roaring Sands',
-    image: '/img/islands/roaringSands.png',
+    image: 'img/islands/roaringSands.png',
     x: 21.75,
     y: 20.67,
     width: 0.17,
@@ -496,7 +496,7 @@ export default [
   },
   {
     name: 'Roaring Traders',
-    image: '/img/islands/roaringTraders.png',
+    image: 'img/islands/roaringTraders.png',
     x: 21.70,
     y: 19.13,
     width: 0.08,
@@ -505,7 +505,7 @@ export default [
   },
   {
     name: "Ruby's Fall",
-    image: '/img/islands/rubysFall.png',
+    image: 'img/islands/rubysFall.png',
     x: 26.15,
     y: 15.53,
     width: 0.61,
@@ -514,7 +514,7 @@ export default [
   },
   {
     name: 'Rum Runner Isle',
-    image: '/img/islands/rumRunnerIsle.png',
+    image: 'img/islands/rumRunnerIsle.png',
     x: 8.50,
     y: 8.80,
     width: 0.31,
@@ -523,7 +523,7 @@ export default [
   },
   {
     name: "Sailors' Bounty",
-    image: '/img/islands/sailorsBounty.png',
+    image: 'img/islands/sailorsBounty.png',
     x: 2.33,
     y: 3.75,
     width: 0.87,
@@ -532,7 +532,7 @@ export default [
   },
   {
     name: "Sailor's Knot Stronghold",
-    image: '/img/islands/sailorsKnotStronghold.png',
+    image: 'img/islands/sailorsKnotStronghold.png',
     x: 4.75,
     y: 13.72,
     width: 0.26,
@@ -541,7 +541,7 @@ export default [
   },
   {
     name: 'Salty Sands',
-    image: '/img/islands/saltySands.png',
+    image: 'img/islands/saltySands.png',
     x: 7.44,
     y: 2.99,
     width: 0.28,
@@ -550,7 +550,7 @@ export default [
   },
   {
     name: 'Sanctuary Outpost',
-    image: '/img/islands/sanctuaryOutpost.png',
+    image: 'img/islands/sanctuaryOutpost.png',
     x: 5.66,
     y: 6.33,
     width: 0.46,
@@ -559,7 +559,7 @@ export default [
   },
   {
     name: 'Sandy Shallows',
-    image: '/img/islands/sandyShallows.png',
+    image: 'img/islands/sandyShallows.png',
     x: 4.27,
     y: 4.26,
     width: 0.26,
@@ -568,7 +568,7 @@ export default [
   },
   {
     name: 'Scorched Pass',
-    image: '/img/islands/scorchedPass.png',
+    image: 'img/islands/scorchedPass.png',
     x: 24.90,
     y: 10.26,
     width: 0.32,
@@ -577,7 +577,7 @@ export default [
   },
   {
     name: 'Scurvy Isley',
-    image: '/img/islands/scurvyIsley.png',
+    image: 'img/islands/scurvyIsley.png',
     x: 11.49,
     y: 3.60,
     width: 0.26,
@@ -586,7 +586,7 @@ export default [
   },
   {
     name: "Sea Dog's Rest",
-    image: '/img/islands/seaDogsRest.png',
+    image: 'img/islands/seaDogsRest.png',
     x: 2.21,
     y: 10.70,
     width: 0.11,
@@ -595,7 +595,7 @@ export default [
   },
   {
     name: 'Shark Bait Cove',
-    image: '/img/islands/sharkBaitCove.png',
+    image: 'img/islands/sharkBaitCove.png',
     x: 7.78,
     y: 18.93,
     width: 0.63,
@@ -604,7 +604,7 @@ export default [
   },
   {
     name: 'Shark Fin Camp',
-    image: '/img/islands/sharkFinCamp.png',
+    image: 'img/islands/sharkFinCamp.png',
     x: 16.43,
     y: 4.57,
     width: 0.24,
@@ -613,7 +613,7 @@ export default [
   },
   {
     name: 'Shipwreck Bay',
-    image: '/img/islands/shipwreckBay.png',
+    image: 'img/islands/shipwreckBay.png',
     x: 13.38,
     y: 9.75,
     width: 0.70,
@@ -622,7 +622,7 @@ export default [
   },
   {
     name: 'Shiver Retreat',
-    image: '/img/islands/shiverRetreat.png',
+    image: 'img/islands/shiverRetreat.png',
     x: 17.62,
     y: 10.49,
     width: 0.17,
@@ -631,7 +631,7 @@ export default [
   },
   {
     name: 'Shark Tooth Key',
-    image: '/img/islands/sharkToothKey.png',
+    image: 'img/islands/sharkToothKey.png',
     x: 16.89,
     y: 12.09,
     width: 0.12,
@@ -640,7 +640,7 @@ export default [
   },
   {
     name: 'Skull Keep',
-    image: '/img/islands/skullKeep.png',
+    image: 'img/islands/skullKeep.png',
     x: 16.90,
     y: 8.83,
     width: 0.22,
@@ -649,7 +649,7 @@ export default [
   },
   {
     name: "Smugglers' Bay",
-    image: '/img/islands/smugglersBay.png',
+    image: 'img/islands/smugglersBay.png',
     x: 5.53,
     y: 2.74,
     width: 0.95,
@@ -658,7 +658,7 @@ export default [
   },
   {
     name: 'Snake Island',
-    image: '/img/islands/snakeIsland.png',
+    image: 'img/islands/snakeIsland.png',
     x: 11.06,
     y: 15.02,
     width: 0.52,
@@ -667,7 +667,7 @@ export default [
   },
   {
     name: "Stephen's Spoils",
-    image: '/img/islands/stephensSpoils.png',
+    image: 'img/islands/stephensSpoils.png',
     x: 12.27,
     y: 14.99,
     width: 0.08,
@@ -676,7 +676,7 @@ export default [
   },
   {
     name: 'The Crooked Masts',
-    image: '/img/islands/theCrookedMasts.png',
+    image: 'img/islands/theCrookedMasts.png',
     x: 15.72,
     y: 10.55,
     width: 0.48,
@@ -685,7 +685,7 @@ export default [
   },
   {
     name: "The Crow's Nest Fortress",
-    image: '/img/islands/theCrowsNestFortress.png',
+    image: 'img/islands/theCrowsNestFortress.png',
     x: 15.26,
     y: 16.99,
     width: 0.24,
@@ -694,7 +694,7 @@ export default [
   },
   {
     name: "The Devil's Thirst",
-    image: '/img/islands/theDevilsThirst.png',
+    image: 'img/islands/theDevilsThirst.png',
     x: 24.25,
     y: 20.52,
     width: 0.68,
@@ -703,7 +703,7 @@ export default [
   },
   {
     name: 'The Finest Trading Post',
-    image: '/img/islands/theFinestTradingPost.png',
+    image: 'img/islands/theFinestTradingPost.png',
     x: 6.24,
     y: 16.73,
     width: 0.08,
@@ -712,7 +712,7 @@ export default [
   },
   {
     name: 'The Forsaken Brink',
-    image: '/img/islands/theForsakenBrink.png',
+    image: 'img/islands/theForsakenBrink.png',
     x: 21.46,
     y: 15.43,
     width: 0.21,
@@ -721,7 +721,7 @@ export default [
   },
   {
     name: 'The North Star Sea Post',
-    image: '/img/islands/theNorthStarSeaPost.png',
+    image: 'img/islands/theNorthStarSeaPost.png',
     x: 8.34,
     y: 9.80,
     width: 0.08,
@@ -730,7 +730,7 @@ export default [
   },
   {
     name: "The Reaper's Hideout",
-    image: '/img/islands/theReapersHideout.png',
+    image: 'img/islands/theReapersHideout.png',
     x: 9.31,
     y: 11.77,
     width: 0.69,
@@ -739,7 +739,7 @@ export default [
   },
   {
     name: 'The Spoils of Plenty Store',
-    image: '/img/islands/theSpoilsOfPlentyStore.png',
+    image: 'img/islands/theSpoilsOfPlentyStore.png',
     x: 2.11,
     y: 6.58,
     width: 0.08,
@@ -748,7 +748,7 @@ export default [
   },
   {
     name: 'The Sunken Grove',
-    image: '/img/islands/theSunkenGrove.png',
+    image: 'img/islands/theSunkenGrove.png',
     x: 16.23,
     y: 6.79,
     width: 0.44,
@@ -757,7 +757,7 @@ export default [
   },
   {
     name: 'The Wild Treasures Store',
-    image: '/img/islands/theWildTreasuresStore.png',
+    image: 'img/islands/theWildTreasuresStore.png',
     x: 15.68,
     y: 3.89,
     width: 0.08,
@@ -766,7 +766,7 @@ export default [
   },
   {
     name: "Thieves' Haven",
-    image: '/img/islands/thievesHaven.png',
+    image: 'img/islands/thievesHaven.png',
     x: 12.84,
     y: 19.27,
     width: 0.72,
@@ -775,7 +775,7 @@ export default [
   },
   {
     name: 'Three Paces East Seapost',
-    image: '/img/islands/threePacesEastSeapost.png',
+    image: 'img/islands/threePacesEastSeapost.png',
     x: 19.96,
     y: 9.10,
     width: 0.08,
@@ -784,7 +784,7 @@ export default [
   },
   {
     name: 'Tri Rock Isle',
-    image: '/img/islands/triRockIsle.png',
+    image: 'img/islands/triRockIsle.png',
     x: 18.56,
     y: 9.33,
     width: 0.21,
@@ -793,7 +793,7 @@ export default [
   },
   {
     name: 'Twin Groves',
-    image: '/img/islands/twinGroves.png',
+    image: 'img/islands/twinGroves.png',
     x: 7.84,
     y: 10.67,
     width: 0.24,
@@ -802,7 +802,7 @@ export default [
   },
   {
     name: "Wanderer's Refuge",
-    image: '/img/islands/wanderersRefuge.png',
+    image: 'img/islands/wanderersRefuge.png',
     x: 6.29,
     y: 11.96,
     width: 0.96,
