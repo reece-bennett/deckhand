@@ -5,7 +5,7 @@ const positionText = document.querySelector('#position-text')
 function updatePositionText () {
   const { lng: x, lat: y } = map.getCenter()
   const zoom = map.getZoom()
-  positionText.innerText = `x: ${x.toFixed()} y: ${y.toFixed()} zoom: ${zoom}`
+  positionText.innerText = `x: ${x.toFixed(1)} y: ${y.toFixed(1)} zoom: ${zoom.toFixed(2)}`
 }
 
 const xy = function (x, y) {
