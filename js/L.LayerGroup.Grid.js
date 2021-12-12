@@ -86,7 +86,9 @@ L.LayerGroup.Grid = L.LayerGroup.extend({
           interactive: false,
           keyboard: false,
           icon: L.divIcon({
-            html: this._ALPHABET[i]
+            className: 'grid-label grid-label--horizontal',
+            iconSize: null,
+            html: `<div class="grid-label__text">${this._ALPHABET[i]}</div>`
           })
         })
         this._xMarkers[i] = marker
@@ -107,7 +109,9 @@ L.LayerGroup.Grid = L.LayerGroup.extend({
           interactive: false,
           keyboard: false,
           icon: L.divIcon({
-            html: 27 - i
+            className: 'grid-label grid-label--vertical',
+            iconSize: null,
+            html: `<div class="grid-label__text">${27 - i}</div>`
           })
         })
         this._yMarkers[i] = marker

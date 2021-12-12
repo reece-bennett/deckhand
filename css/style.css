@@ -35,6 +35,7 @@ html, body {
 #map {
   height: 100%;
   background: rgb(120 180 216);
+  font-family: 'IM Fell English', serif;
 }
 
 #position-text {
@@ -46,6 +47,8 @@ html, body {
   padding: 4px 8px;
 }
 
-.leaflet-grid-label .gridlabel-vert {
-  transform: none;
+.island-label__text {
+  font-size: 16px;
+  white-space: nowrap;
+  transform: translate(-50%, -100%)
 }

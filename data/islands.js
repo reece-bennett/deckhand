@@ -225,7 +225,7 @@ export default [
     rotation: 90
   },
   {
-    name: 'fort of the Dammed',
+    name: 'Fort of the Dammed',
     image: 'img/islands/fortOfTheDammed.png',
     x: 12.67,
     y: 13.63,

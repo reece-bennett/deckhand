@@ -39,6 +39,18 @@ islands.forEach(island => {
     island.rotation
   ).addTo(map)
   image._image.style.imageRendering = 'pixelated' // Not sure I like this, bit blurry is nice when you are far out, maybe only add at high zoom levels?
+
+  const W_2 = island.width * 0.5
+  const offset = W_2 + W_2 * (Math.SQRT2 - 1) * Math.abs(Math.sin(island.rotation * (Math.PI / 90)))
+  L.marker(xy(island.x, island.y - Math.abs(offset)), {
+    interactive: false,
+    keyboard: false,
+    icon: L.divIcon({
+      className: 'island-label',
+      iconSize: null, // Setting to null unsets width and height styles
+      html: `<div class="island-label__text">${island.name}</div>`
+    })
+  }).addTo(map)
 })
 
 L.layerGroup.grid({
