@@ -28,7 +28,7 @@ const map = L.map('map', {
     padding: 1 // Stops grid disappearing when panning
   })
 })
-map.setView([15, 15], 4)
+map.setView([13, 13], 6)
 // map.fitBounds([xy(0, 0), xy(26, 26)])
 
 islands.forEach(island => {
