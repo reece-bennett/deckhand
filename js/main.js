@@ -1,13 +1,5 @@
 import islands from '../data/islands.js'
 
-const positionText = document.querySelector('#position-text')
-
-function updatePositionText () {
-  const { lng: x, lat: y } = map.getCenter()
-  const zoom = map.getZoom()
-  positionText.innerText = `x: ${x.toFixed(1)} y: ${y.toFixed(1)} zoom: ${zoom.toFixed(2)}`
-}
-
 const xy = function (x, y) {
   if (L.Util.isArray(x)) {
     // When doing xy([x, y])
@@ -53,10 +45,6 @@ islands.forEach(island => {
   }).addTo(map)
 })
 
-L.layerGroup.grid({
+L.layerGroup.grid().addTo(map)
 
-}).addTo(map)
-
-map.on('zoom move', updatePositionText)
-
-updatePositionText()
+L.control.position({ position: 'bottomleft' }).addTo(map)

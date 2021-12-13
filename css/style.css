@@ -35,19 +35,17 @@ html, body {
 #map {
   height: 100%;
   background: rgb(120 180 216);
-  font-family: 'IM Fell English', serif;
 }
 
-#position-text {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.5);
-  padding: 4px 8px;
+.leaflet-container .control-position {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  padding: 0 5px;
 }
 
 .grid-label {
+  font-family: 'IM Fell English', serif;
   line-height: 1;
   font-size: 32px;
 }
@@ -71,6 +69,10 @@ html, body {
 
 .grid-label--vertical > .grid-label__text {
   transform: translate(0, -50%);
+}
+
+.island-label {
+  font-family: 'IM Fell English', serif;
 }
 
 .island-label__text {
