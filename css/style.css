@@ -44,6 +44,45 @@ html, body {
   padding: 0 5px;
 }
 
+.control-timer {
+  box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+  border-radius: 4px;
+}
+
+.control-timer a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.control-timer .control-timer__open-button {
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  display: block;
+  text-align: center;
+}
+
+.control-timer .control-timer__open-button:hover {
+  background: rgb(244, 244, 244);
+}
+
+.control-timer--expanded .control-timer__open-button {
+  display: none;
+}
+
+.control-timer__panel {
+  display: none;
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+  padding: 4px 8px;
+}
+
+.control-timer--expanded .control-timer__panel {
+  display: block;
+}
+
 .grid-label {
   font-family: 'IM Fell English', serif;
   line-height: 1;
