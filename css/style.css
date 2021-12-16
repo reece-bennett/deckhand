@@ -14,7 +14,7 @@ html {
 body {
   margin: 1rem;
   font-family: sans-serif;
-  line-height: 1.5;
+  /* line-height: 1.5; */
 }
 
 /* images and videos max out at full width */
@@ -76,11 +76,80 @@ html, body {
   display: none;
   border-radius: 4px;
   background: rgb(255, 255, 255);
-  padding: 4px 8px;
+  padding: 8px 12px;
 }
 
 .control-timer--expanded .control-timer__panel {
   display: block;
+}
+
+.control-timer__header {
+  margin-bottom: 10px
+}
+
+.control-timer__title {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.control-timer__close-button {
+  vertical-align: bottom;
+  float: right;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.control-timer__timer-bar {
+  line-height: 1;
+}
+
+.control-timer__start-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.control-timer--running .control-timer__start-button-container {
+  display: none;
+}
+
+.control-timer__timer {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.control-timer--running .control-timer__timer {
+  display: flex;
+}
+
+@property --p {
+  syntax: '<percentage>';
+  initial-value: 100%;
+  inherits: false;
+}
+
+.control-timer__progress {
+  transition: --p 1s linear;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background:
+    radial-gradient(closest-side, white 90%, transparent 92%),
+    conic-gradient(rgb(10, 10, 10) var(--p), rgb(200, 200, 200) 0%);
+  line-height: 100px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.control-timer__cancel-button {
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .grid-label {
