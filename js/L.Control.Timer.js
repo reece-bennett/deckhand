@@ -6,6 +6,13 @@ L.Control.Timer = L.Control.extend({
     'Fire!'
   ],
 
+  _stageClasses: [
+    'control-timer--cooking',
+    'control-timer--burning',
+    'control-timer--igniting',
+    'control-timer--fire'
+  ],
+
   _cookingTimes: {
     fish: 40000,
     trophyFish: 90000,
@@ -86,6 +93,7 @@ L.Control.Timer = L.Control.extend({
       now + cookingTime * 2 + 300000
     ]
     L.DomUtil.addClass(this._container, 'control-timer--running')
+    L.DomUtil.addClass(this._container, this._stageClasses[0])
     this._update()
   },
 
@@ -94,6 +102,8 @@ L.Control.Timer = L.Control.extend({
     if (this._remaining < 1000) {
       this._stage++
       this._startTime = now
+      this._stageClasses.forEach(c => L.DomUtil.removeClass(this._container, c))
+      L.DomUtil.addClass(this._container, this._stageClasses[this._stage])
     }
     this._remaining = this._stages[this._stage] - now
     this._draw()
@@ -117,6 +127,7 @@ L.Control.Timer = L.Control.extend({
 
   _cancel: function () {
     L.DomUtil.removeClass(this._container, 'control-timer--running')
+    this._stageClasses.forEach(c => L.DomUtil.removeClass(this._container, c))
     clearTimeout(this._timeoutId)
   }
 })

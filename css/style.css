@@ -99,6 +99,7 @@ html, body {
   background: none;
   border: none;
   padding: 0;
+  margin-right: -5px;
 }
 
 .control-timer__timer-bar {
@@ -140,10 +141,22 @@ html, body {
   border-radius: 50%;
   background:
     radial-gradient(closest-side, white 90%, transparent 92%),
-    conic-gradient(rgb(10, 10, 10) var(--p), rgb(200, 200, 200) 0%);
+    conic-gradient(var(--progress-colour) var(--p), rgb(200, 200, 200) 0%);
   line-height: 100px;
   text-align: center;
   font-size: 2em;
+}
+
+.control-timer--cooking {
+  --progress-colour: #4CAF50;
+}
+
+.control-timer--burning {
+  --progress-colour: #FF9800;
+}
+
+.control-timer--igniting, .control-timer--fire {
+  --progress-colour: #F44336;
 }
 
 .control-timer__cancel-button {
