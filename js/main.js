@@ -47,4 +47,6 @@ islands.forEach(island => {
 
 L.layerGroup.grid().addTo(map)
 
+L.control.timer({ position: 'topright' }).addTo(map)
+
 L.control.position({ position: 'bottomleft' }).addTo(map)

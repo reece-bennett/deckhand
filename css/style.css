@@ -14,7 +14,7 @@ html {
 body {
   margin: 1rem;
   font-family: sans-serif;
-  line-height: 1.5;
+  /* line-height: 1.5; */
 }
 
 /* images and videos max out at full width */
@@ -42,6 +42,127 @@ html, body {
   background: rgba(255, 255, 255, 0.7);
   font-size: 11px;
   padding: 0 5px;
+}
+
+.control-timer {
+  box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+  border-radius: 4px;
+}
+
+.control-timer a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.control-timer .control-timer__open-button {
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  display: block;
+  text-align: center;
+}
+
+.control-timer .control-timer__open-button:hover {
+  background: rgb(244, 244, 244);
+}
+
+.control-timer--expanded .control-timer__open-button {
+  display: none;
+}
+
+.control-timer__panel {
+  display: none;
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+  padding: 8px 12px;
+}
+
+.control-timer--expanded .control-timer__panel {
+  display: block;
+}
+
+.control-timer__header {
+  margin-bottom: 10px
+}
+
+.control-timer__title {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.control-timer__close-button {
+  vertical-align: bottom;
+  float: right;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: -5px;
+}
+
+.control-timer__timer-bar {
+  line-height: 1;
+}
+
+.control-timer__start-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.control-timer--running .control-timer__start-button-container {
+  display: none;
+}
+
+.control-timer__timer {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.control-timer--running .control-timer__timer {
+  display: flex;
+}
+
+@property --p {
+  syntax: '<percentage>';
+  initial-value: 100%;
+  inherits: false;
+}
+
+.control-timer__progress {
+  transition: --p 1s linear;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background:
+    radial-gradient(closest-side, white 90%, transparent 92%),
+    conic-gradient(var(--progress-colour) var(--p), rgb(200, 200, 200) 0%);
+  line-height: 100px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.control-timer--cooking {
+  --progress-colour: #4CAF50;
+}
+
+.control-timer--burning {
+  --progress-colour: #FF9800;
+}
+
+.control-timer--igniting, .control-timer--fire {
+  --progress-colour: #F44336;
+}
+
+.control-timer__cancel-button {
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .grid-label {
